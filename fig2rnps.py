@@ -6,7 +6,8 @@ targets = ('XIST',
            '7SK',
            'U2',
            'U6',
-           'U1',)
+           'U1',
+           'Sm Ring',)
 
 # Lists of known interactors
 # Xist, from McHugh et al, Nature 2015 (https://doi.org/10.1038/nature14443)
@@ -48,11 +49,6 @@ rmrp = ('Pop1',
 # Lsm10 and Lsm11 are specific to U7
 useven = ('Lsm10',
          'Lsm11',
-         'Snrpf',
-         'Snrpb',
-         'Snrpd3',
-         'Snrpg',
-         'Snrpe',
          'Zfp100',
          'Slbp')
 
@@ -61,12 +57,12 @@ useven = ('Lsm10',
 sevensk = ('Hexim1',
           'Mepce',
           'Larp7',
-          'Hnrnpq',
-          'Hnrnpr',
-          'Hnrnpa1',
-          'Hnrnpa2',
-          'Cdk9',
-          'Cyct1')
+          #'Hnrnpq',
+          #'Hnrnpr',
+          #'Hnrnpa1',
+          #'Hnrnpa2',
+          'Cdk9',)
+          #'Cyct1')
 
 # U2, from Zhang et al, Nature 2020 (https://doi.org/10.1038/s41586-020-2344-3)
 # Also Scofield and Lynch, Mol Bio Evol 2008 (doi:10.1093/molbev/msn175)
@@ -82,15 +78,7 @@ utwo = ('Snrpa1',
        'Tat-sf1',
        'Sf3b4',
        'Sf3a2',
-       'Sf3a1',
-       'Snrpb',
-       'Snrpd1',
-       'Snrpd2',
-       'Snrpd3'
-       'Snrpg',
-       'Snrpe',
-       'Snrpf',
-       'Snrpg')
+       'Sf3a1',)
 
 # U6, Montemayor et al, Nature Comms 2018 (https://doi.org/10.1038/s41467-018-04145-4)
 usix = ('Lsm8', # Lsm8 is nearly identical to Lsm1, so may be some ambiguity based on recovered peptides
@@ -111,12 +99,13 @@ usix = ('Lsm8', # Lsm8 is nearly identical to Lsm1, so may be some ambiguity bas
 # U1, Kondo et al, eLife 2015 (https://doi.org/10.7554/eLife.04986)
 uone = ('Snrpc',
        'Snrpa',
-       'Snrnp70',
-       'Snrpb',
+       'Snrnp70',)
+
+# Sm Ring proteins
+sm = ('Snrpb',
        'Snrpd1',
        'Snrpd2',
        'Snrpd3',
-       'Snrpg',
        'Snrpe',
        'Snrpf',
        'Snrpg')
@@ -128,12 +117,13 @@ ms_canon_rnps = (xist,
               sevensk, 
               utwo, 
               usix, 
-              uone,)
+              uone,
+              sm)
 
 hu_canon_rnps = []
 
 for i in ms_canon_rnps:
     hu_canon_rnps.append([u.upper() for u in i])
 
-mousernps = dict(zip(targets, ms_canon_rnps))
-humanrnps = dict(zip(targets, hu_canon_rnps))
+f2mousernps = dict(zip(targets, ms_canon_rnps))
+f2humanrnps = dict(zip(targets, hu_canon_rnps))
