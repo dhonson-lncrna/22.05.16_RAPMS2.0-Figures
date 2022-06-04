@@ -86,7 +86,7 @@ utwo = ('Snrpa1',
        'Snrpb',
        'Snrpd1',
        'Snrpd2',
-       'Snrpd3'
+       'Snrpd3',
        'Snrpg',
        'Snrpe',
        'Snrpf',
